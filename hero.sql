@@ -171,3 +171,8 @@ SELECT class_name, hero_name
 FROM hero INNER JOIN class
 ON hero.class_id = class.class_id
 WHERE hero_name = 'Range Archers'
+--7. "feat/select-avg-playerlevel-per-class"
+SELECT AVG(player_level) FROM class
+JOIN player ON hero_id = player.hero_id
+JOIN hero ON hero.class_id = class.class_id
+GROUP BY player.player_level
