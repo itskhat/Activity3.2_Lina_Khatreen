@@ -155,3 +155,9 @@ VALUES
 --3. "feat/add-column-price"
 ALTER TABLE item
 ADD COLUMN item_price DECIMAL(10,2)
+--4 "feat/update-delete-inactive"
+UPDATE hero SET is_active = 'false'
+WHERE hero_id = 1
+
+DELETE FROM heroitem
+WHERE hero_id = 1
